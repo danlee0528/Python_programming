@@ -1,0 +1,29 @@
+# /: positional-only parameters
+# *: keyword-only arguments
+# example: def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2)
+
+def standard_arg(arg):
+    print(arg)
+
+def pos_only_arg(arg, /):
+    print(arg)
+
+def kwd_only_arg(*, arg):
+    print(arg)
+
+def combined_example(pos_only, /, standard, *, kwd_only):
+    print(pos_only, standard, kwd_only)
+
+standard_arg(2)
+standard_arg(arg=2)
+pos_only_arg(1)
+kwd_only_arg(arg=3)
+combined_example(1,2, kwd_only=3)
+combined_example(1, standard=2, kwd_only=3)
+
+# '/' allows "name" to be a positional argument and as a key in the keyword arguments, **kwds
+def foo(name, /, **kwds):
+    return 'name' in kwds
+
+foo(1, **{'name':2}) # reutnrs true
+
