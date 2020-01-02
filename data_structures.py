@@ -23,3 +23,33 @@ print(a - b)    # letters in a but not in b
 print(a | b)    # letters in a or b or both
 print(a & b)    # letters in both a and b
 print(a ^ b)    # letters in a or b but not both
+
+print('\n' * 2)
+print("=== Dictionaries ===")
+# A set of key: value pairs
+tel = {'jack': 4098, 'sape': 4139}
+print("Dictionary:",tel)
+tel_2 = dict([('jack', 4098), ('sape', 4139)])
+print("Dictionary_2:", tel_2)
+tel_3 = dict(jack=4098, sape=4139)
+print("Dictionary_3:", tel_3)
+
+# When looping through dictionaries
+# return the key and corresponding value
+print("Printing key and value pairs")
+for k, v in tel.items():
+    print(k, v)
+
+# when looping through a sequence
+# return position index and corresponding value
+print("Printing Indexes with corresponding values")
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+
+# when looping over two or more sequences at the same time
+# reutrn paired entries
+questions = ['name', 'quest', 'favourite colour']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}? It is {1}.'.format(q,a))
+
