@@ -1,2 +1,2 @@
-# python-coding-notes
-A self-learning note for Python 3.8.1
+# Official Python 3.8.1 Document
+  - [3.8.1 Documentation](https://docs.python.org/3/)
